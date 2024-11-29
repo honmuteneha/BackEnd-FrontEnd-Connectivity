@@ -1,0 +1,41 @@
+{
+  "enquiry": [
+    {
+      "applicant_Id": "1",
+      "first_Name": "Neha",
+      "last_Name": "Honmute",
+      "age": 27,
+      "email": "honmuteneha@gmail,com",
+      "mobileNo": 9625478236,
+      "alternateMobileNo": 9987412036,
+      "pancardNo": "ABPH2145PI",
+      "adharNo": 25478965323,
+      "address": "Karve nagar",
+      "city": "Pune",
+      "cibilScore": {
+        "cibilId": "",
+        "cibilScore": "",
+        "status": ""
+      }
+    },
+    {
+      "id": "6c1d",
+      "applicant_Id": "2",
+      "first_Name": "priyanka",
+      "last_Name": "godse",
+      "age": "29",
+      "email": "priyanka@gmail.com",
+      "mobileNo": "8745962547",
+      "alternateMobileNo": "3256987456",
+      "pancardNo": "76544",
+      "adharNo": "1234567895",
+      "address": "hinjewadi",
+      "city": "pune",
+      "enquiry": {
+        "cibilId": "0",
+        "cibilScore": "0",
+        "status": "pending"
+      }
+    }
+  ]
+}
