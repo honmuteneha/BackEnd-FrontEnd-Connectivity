@@ -15,26 +15,9 @@
       "cibilScore": {
         "cibilId": "",
         "cibilScore": "",
-        "status": ""
-      }
-    },
-    {
-      "id": "6c1d",
-      "applicant_Id": "2",
-      "first_Name": "priyanka",
-      "last_Name": "godse",
-      "age": "29",
-      "email": "priyanka@gmail.com",
-      "mobileNo": "8745962547",
-      "alternateMobileNo": "3256987456",
-      "pancardNo": "76544",
-      "adharNo": "1234567895",
-      "address": "hinjewadi",
-      "city": "pune",
-      "enquiry": {
-        "cibilId": "0",
-        "cibilScore": "0",
-        "status": "pending"
+        "status": "",
+        "cibilScoreDateandTime":"",
+        "remark":""
       }
     }
   ]

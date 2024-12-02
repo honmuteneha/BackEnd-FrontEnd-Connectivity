@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
+import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 function ViewData(){
     const [enquiry,setProduct]=useState([]);
@@ -10,6 +11,20 @@ function ViewData(){
         .then((res)=>setProduct(res.data))
     }
     useEffect(getData,[])
+    function deleteEnquiry(applicant_Id)
+    {
+      
+      axios.delete(`http://localhost:9091/enquiry/del/${applicant_Id}`)
+      .then(res=>{
+        if(res.status===200)
+        {
+            alert("Enquiry details removed..")
+            window.location.reload();
+        }
+      })
+      .catch(error=>console.log(error));
+      
+    }
 
     return(
         <div>
@@ -18,7 +33,7 @@ function ViewData(){
                 <tr>
                     <th>Applicant_Id</th>
                     <th>First Name</th>
-                    <th> Last Name</th>
+                    <th>Last Name</th>
                     <th>Age</th>
                     <th>Email</th>                                     
                     <th>MobileNo</th>
@@ -32,6 +47,7 @@ function ViewData(){
                     <th>Status</th>
                     <th>CibilScoreDateandTime</th>
                     <th>Remark</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,11 +64,15 @@ function ViewData(){
                         <td>{enquiry.adharNo}</td>
                         <td>{enquiry.address}</td>
                         <td>{enquiry.city}</td>
-                        <td>{enquiry.cibilScore.cibilId}</td>
+                        {/* <td>{enquiry.cibilScore.cibilId}</td>
                         <td>{enquiry.cibilScore.cibilScore}</td>
                         <td>{enquiry.cibilScore.status}</td>
                         <td>{enquiry.cibilScore.cibilScoreDateandTime}</td>
-                        <td>{enquiry.cibilScore.remark}</td>
+                        <td>{enquiry.cibilScore.remark}</td> */}
+                        <td>
+                            <button className="btn btn-outline-danger me-4" onClick={()=>deleteEnquiry(enquiry.applicant_Id)}><i class="bi bi-trash3-fill"></i></button>
+                            <Link className="btn btn-outline-primary" to={`/edit/${enquiry.applicant_Id}`}><i class="bi bi-pencil-square"></i></Link>
+                        </td>
                         </tr>)
                 }
                 </tbody> 
